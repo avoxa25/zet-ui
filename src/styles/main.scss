@@ -114,6 +114,21 @@
 
       transform: translate(0, -50%);
     }
+
+    .triangle {
+      position: absolute;
+      right: -10%;
+      bottom: -15%;
+
+      width: 35%;
+
+      padding-top: 35%;
+
+      background-image: url("/img/triangle.webp");
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
   }
 
 }
