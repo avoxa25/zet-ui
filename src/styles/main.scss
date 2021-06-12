@@ -142,6 +142,17 @@
       background-repeat: no-repeat;
       background-size: 190%;
     }
+
+    .border {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+
+      background-image: url("/img/border-auth.webp");
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      background-size: 97.5% 97.5%;
+    }
   }
 
 }
