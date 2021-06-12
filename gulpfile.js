@@ -42,29 +42,17 @@ exports.styles = styles = () => {
     .pipe(sync.stream());
 }
 
-const imgmin = () => {
-  return gulp.src('src/img/*.*')
-    .pipe(imagemin())
-    .pipe(rename((p) => {
-      p.basename += ".min"
-    }))
-    .pipe(gulp.dest('src/img'))
-    .pipe(sync.stream());
-}
-
 const movesvg = () => {
-  return gulp.src('src/img/*.min.svg', { read: true })
-    .pipe(clean())
+  return gulp.src('src/img/*.svg', { read: true })
     .pipe(gulp.dest('dist/img'));
 }
 
 const towebp = () => {
-  return gulp.src('src/img/*.min.{jpg,png}', { read: true })
-    .pipe(clean())
+  return gulp.src('src/img/*.{jpg,png}', { read: true })
     .pipe(webp({
-      quality: 50
+      quality: 100
     }))
-    .pipe(gulp.dest('dist/img'))
+    .pipe(gulp.dest('dist/img'));
 }
 
 exports.webpack = webpack = () => {
@@ -132,6 +120,6 @@ const watcher = () => {
   gulp.watch('src/**/*.js', gulp.series('jsmin'));
 }
 
-exports.images = series(imgmin, movesvg, towebp);
+exports.images = series(movesvg, towebp);
 exports.default = series(styles, webpack, jsmin, html, browsersync, watcher);
 

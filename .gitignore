@@ -1,6 +1,6 @@
 dist
 node_modules
-/src/*.js
+*.js
 *.min.*
 *.webp
 README.md
