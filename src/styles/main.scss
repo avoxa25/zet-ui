@@ -129,6 +129,19 @@
       background-repeat: no-repeat;
       background-size: cover;
     }
+
+    .girl {
+      position: absolute;
+      left: 0;
+
+      width: 50%;
+      height: 100%;
+
+      background-image: url("/img/girl.webp");
+      background-position: 55% 12.5%;
+      background-repeat: no-repeat;
+      background-size: 190%;
+    }
   }
 
 }
