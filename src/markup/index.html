@@ -25,6 +25,7 @@
         <p>Нажмите
             <b>ENTER</b>
             для продолжения</p>
+            <canvas class="smoke-animation"></canvas>
     </section>
 
     <section class="screen-auth" id="screenAuth">
@@ -40,7 +41,7 @@
                 <a href="#" id="registration">Зарегистрируйся!</a>
             </p>
             <form>
-                <input type="text" placeholder="Логин">
+                <input type="text" placeholder="Логин" class="login">
                 <div class="prompt">
                     <h3>Введите логин</h3>
                     <p>Введите тот логин которую Вы 
@@ -49,7 +50,7 @@
                         хочет зайти поиграть на наш
                         сервер</p>
                 </div>
-                <input type="password" placeholder="Пароль">
+                <input type="password" placeholder="Пароль" class="password">
                 <div class="prompt">
                     <h3>Введите пароль</h3>
                     <p>Введите тот пароль который
@@ -62,10 +63,10 @@
             </form>
             <a href="#">Забыли пароль?</a>
         </div>
-
+        <canvas class="smoke-animation" id="smokeAnimation"></canvas>
     </section>
 
-    <canvas class="smoke-animation" id="smokeAnimation"></canvas>
+    
     <script src="main.min.js"></script>
     <script src="smoke.js"></script>
 </body>
