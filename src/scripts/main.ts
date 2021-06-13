@@ -1,10 +1,18 @@
-class Test {
-    private readonly pElement = document.querySelector('#test') as HTMLParagraphElement;
+class Enter {
+    private readonly screen = document.querySelector('#screenWelcome') as HTMLElement;
 
-    public setStyle(): void {
-        this.pElement.style.color = `blue`;
-        console.log(`Set style to blue`)
+    constructor() {
+        window.addEventListener(`keydown`, (e)=> this.PressKey(e));
+    }
+
+    PressKey(event: KeyboardEvent): void {
+        console.log(`123`)
+        if(event.key == `Enter`) {
+            this.screen.classList.add(`hide`);
+            setTimeout(() => this.screen.hidden = true, 1000);
+            console.log(`asd`)
+        }
     }
 }
 
-(window as any).Test = new Test;
+(window as any).enter = new Enter();
