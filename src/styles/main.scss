@@ -94,6 +94,7 @@ body {
     background-image: url("img/bg-auth.webp");
     @include backgroundImage(50%);
 
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
     overflow: hidden;
 
     .circle {
@@ -237,7 +238,7 @@ body {
 
   &registration {
     position: absolute;
-    z-index: 998;
+    z-index: 990;
 
     width: 100%;
     height: 100%;
@@ -388,7 +389,7 @@ body {
 
   &restore {
     position: absolute;
-    z-index: 997;
+    z-index: 990;
 
     width: 100%;
     height: 100%;

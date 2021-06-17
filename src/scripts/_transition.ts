@@ -19,11 +19,13 @@ class Transition {
             if (newScreen.classList.contains(`to-left`) || newScreen.classList.contains(`to-right`)) {
                 newScreen.classList.contains(`to-left`) ? newScreen.classList.remove(`to-left`) : newScreen.classList.remove(`to-right`);
             } else {
+                newScreen.style.zIndex = `998`;
                 currentScreen.classList.add(Math.random() > 0.5 ? `to-left` : `to-right`);
-                currentScreen.classList.remove(`active`);
             }
+            
             newScreen.classList.add(`active`);
-            setTimeout(() => currentScreen.hidden = true, 1000);
+            currentScreen.classList.remove(`active`);
+            setTimeout(()=> currentScreen.style.removeProperty(`z-index`), 1000);
         }
     }
 
