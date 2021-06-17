@@ -1,4 +1,5 @@
 @import url(global.scss);
+@import url(mixins.scss);
 
 @keyframes fadein {
   0% {
@@ -33,16 +34,12 @@
     padding: 0;
 
     background-image: url("img/bg.webp");
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-    background-size: cover;
+    @include backgroundImage(50%);
 
     overflow: hidden;
 
     .vignette {
-      position: absolute;
-      top: 50%;
-      left: 50%;
+      @include absoluteCenter();
 
       width: 145%;
       height: 145%;
@@ -54,9 +51,7 @@
     }
 
     .border {
-      position: absolute;
-      top: 50%;
-      left: 50%;
+      @include absoluteCenter();
 
       width: 98%;
       height: 95%;
@@ -68,9 +63,7 @@
     }
 
     .round {
-      position: absolute;
-      top: 50%;
-      left: 50%;
+      @include absoluteCenter();
 
       width: 20%;
 
@@ -84,9 +77,7 @@
     }
 
     img {
-      position: absolute;
-      top: 50%;
-      left: 50%;
+      @include absoluteCenter();
 
       transform: translate(-50%, -50%);
     }
@@ -116,9 +107,7 @@
     padding: 0;
 
     background-image: url("img/bg-auth.webp");
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-    background-size: cover;
+    @include backgroundImage(50%);
 
     overflow: hidden;
 
@@ -133,9 +122,7 @@
       padding-top: 55%;
 
       background-image: url("img/circle.webp");
-      background-position: 50% 50%;
-      background-repeat: no-repeat;
-      background-size: cover;
+      @include backgroundImage(50%);
 
       transform: translate(0, -50%);
     }
@@ -151,9 +138,7 @@
       padding-top: 35%;
 
       background-image: url("img/triangle.webp");
-      background-position: 50% 50%;
-      background-repeat: no-repeat;
-      background-size: cover;
+      @include backgroundImage(50%);
     }
 
     .girl {
@@ -210,9 +195,7 @@
         height: 680px;
 
         background-image: url("img/rhombus.webp");
-        background-position: 50% 50%;
-        background-repeat: no-repeat;
-        background-size: cover;
+        @include backgroundImage(50%);
       }
 
       form {
