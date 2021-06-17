@@ -14,7 +14,7 @@
 </head>
 
 <body>
-    <section class="screen-welcome" id="screenWelcome" hidden>
+    <section class="screen-welcome" id="screenWelcome">
         <h2 class="visually-hidden">Welcome screen</h2>
         <div class="vignette"></div>
         <div class="border"></div>
@@ -28,7 +28,7 @@
             <canvas class="smoke-animation"></canvas>
     </section>
 
-    <section class="screen-auth" id="screenAuth" hidden>
+    <section class="screen-auth" id="screenAuth">
         <h2 class="visually-hidden">Auth screen</h2>
         <div class="circle"></div>
         <div class="triangle"></div>
@@ -38,7 +38,7 @@
             <img src="img/logo-auth.webp">
             <h2>Авторизация</h2>
             <p>Нет аккаунта?
-                <a href="#" id="registration">Зарегистрируйся!</a>
+                <a href="#" id="buttonRegistration">Зарегистрируйся!</a>
             </p>
             <form>
                 <input type="text" placeholder="Логин" class="login">
@@ -61,7 +61,7 @@
                 </div>
                 <button>Войти</button>
             </form>
-            <a href="#">Забыли пароль?</a>
+            <a href="#" id="buttonRestore">Забыли пароль?</a>
         </div>
         <canvas class="smoke-animation" id="smokeAnimation"></canvas>
     </section>
@@ -128,7 +128,7 @@
         <canvas class="smoke-animation" id="smokeAnimation"></canvas>
     </section>
 
-    <section class="screen-restore" id="screenRestore">
+    <section class="screen-restore" id="screenRestore" hidden>
         <h2 class="visually-hidden">Restore screen</h2>
         <div class="triangle"></div>
         <div class="character"></div>
