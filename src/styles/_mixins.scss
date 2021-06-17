@@ -5,7 +5,7 @@
 }
 
 @mixin backgroundImage($percent) {
-    background-position: $percent $percent;
+    background-position: $percent#{'%'} $percent#{'%'};
     background-repeat: no-repeat;
     background-size: cover;
 }
