@@ -14,7 +14,7 @@
 </head>
 
 <body>
-    <section class="screen-welcome" id="screenWelcome" >
+    <section class="screen-welcome" id="screenWelcome" hidden>
         <h2 class="visually-hidden">Welcome screen</h2>
         <div class="vignette"></div>
         <div class="border"></div>
@@ -28,7 +28,7 @@
             <canvas class="smoke-animation"></canvas>
     </section>
 
-    <section class="screen-auth" id="screenAuth">
+    <section class="screen-auth" id="screenAuth" hidden>
         <h2 class="visually-hidden">Auth screen</h2>
         <div class="circle"></div>
         <div class="triangle"></div>
@@ -66,8 +66,62 @@
         <canvas class="smoke-animation" id="smokeAnimation"></canvas>
     </section>
 
+    <section class="screen-registration" id="screenRegistration">
+        <h2 class="visually-hidden">Registration screen</h2>
+        <div class="circle"></div>
+        <div class="girl"></div>
+        <div class="border"></div>
+        <div class="registration">
+            <img src="img/logo-registration.webp">
+            <h2>Регистрация</h2>
+            <p>Уже есть аккаунт?
+                <a href="#" id="registration">Войдите</a>
+            </p>
+            <form>
+                <input type="text" placeholder="Почта" class="email">
+                <div class="prompt">
+                    <h3>Введите логин</h3>
+                    <p>Введите тот логин которую Вы 
+                        вводили при регистрации
+                        без него мы не поймем кто
+                        хочет зайти поиграть на наш
+                        сервер</p>
+                </div>
+                <input type="text" placeholder="Логин" class="login">
+                <div class="prompt">
+                    <h3>Введите логин</h3>
+                    <p>Введите тот логин которую Вы 
+                        вводили при регистрации
+                        без него мы не поймем кто
+                        хочет зайти поиграть на наш
+                        сервер</p>
+                </div>
+                <input type="password" placeholder="Пароль" class="password">
+                <div class="prompt">
+                    <h3>Введите пароль</h3>
+                    <p>Введите тот пароль который
+                        вводили при регистраци
+                        иначе без него Вам не зайти
+                        под логином который Вы
+                        написали выше</p>
+                </div>
+                <input type="password" placeholder="Повторите пароль" class="password">
+                <div class="prompt">
+                    <h3>Введите пароль</h3>
+                    <p>Введите тот пароль который
+                        вводили при регистраци
+                        иначе без него Вам не зайти
+                        под логином который Вы
+                        написали выше</p>
+                </div>
+                <button>Зарегистрироваться</button>
+            </form>
+        </div>
+        <canvas class="smoke-animation" id="smokeAnimation"></canvas>
+    </section>
+
     
-    <script src="main.min.js"></script>
+    <script src="main.compiled.min.js"></script>
     <script src="smoke.js"></script>
 </body>
 
