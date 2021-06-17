@@ -1,26 +1,6 @@
 @import "_global.scss";
 @import "_mixins.scss";
 
-@keyframes fadein {
-  0% {
-    opacity: 0;
-  }
-
-  50% {
-    opacity: 1
-  }
-
-  100% {
-    opacity: 0;
-  }
-}
-
-.hide {
-  opacity: 0;
-
-  transition: opacity 1s ease-in-out;
-}
-
 .screen- {
 
   &welcome {
@@ -417,7 +397,7 @@
 
     .triangle {
       position: absolute;
-      right: -10%;
+      right: 10%;
       bottom: -15%;
       z-index: 7;
 
@@ -433,16 +413,16 @@
 
     .character {
       position: absolute;
-      left: 0;
+      right: 0;
       z-index: 8;
 
       width: 50%;
       height: 100%;
 
       background-image: url("img/character-restore.webp");
-      background-position: 55% 12.5%;
+      background-position: 150% 12.5%;
       background-repeat: no-repeat;
-      background-size: 190%;
+      background-size: 80%;
     }
 
     .border {
@@ -472,7 +452,7 @@
 
       color: white;
 
-      transform: translate(100%, -50%);
+      transform: translate(-50%, -50%);
 
       form {
         position: relative;
@@ -496,10 +476,10 @@
 
       .prompt {
         position: absolute;
-        top: 120px;
-        left: -300px;
+        top: 30%;
+        left: -180px;
 
-        width: 280px;
+        width: 150px;
 
         margin: 0;
         padding: 10px;

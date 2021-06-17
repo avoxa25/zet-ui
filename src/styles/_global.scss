@@ -44,3 +44,23 @@ input {
     clip: rect(0 0 0 0);
     overflow: hidden;
 }
+
+@keyframes fadein {
+    0% {
+      opacity: 0;
+    }
+  
+    50% {
+      opacity: 1
+    }
+  
+    100% {
+      opacity: 0;
+    }
+  }
+  
+  .hide {
+    opacity: 0;
+  
+    transition: opacity 1s ease-in-out;
+  }
