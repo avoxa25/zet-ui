@@ -334,6 +334,23 @@
         input {
           height: 80px;
         }
+
+        input:nth-of-type(2)+.prompt {
+          top: 30%;
+          left: 105%;
+        }
+
+        input:nth-of-type(3)+.prompt {
+          top: 50%;
+        }
+
+        input:nth-of-type(4)+.prompt {
+          top: 70%;
+          left: 105%;
+        }
+        input:nth-of-type(4)+.prompt+.prompt {
+          top: 70%;
+        }
       }
 
       button {
@@ -350,10 +367,10 @@
 
       .prompt {
         position: absolute;
-        top: 120px;
-        left: -300px;
+        top: 15%;
+        left: -170px;
 
-        width: 280px;
+        width: 150px;
 
         margin: 0;
         padding: 10px;
@@ -371,7 +388,8 @@
       }
     }
 
-    input:focus+.prompt {
+    input:focus+.prompt,
+    input:focus+.prompt+.prompt {
       opacity: 1;
     }
 
