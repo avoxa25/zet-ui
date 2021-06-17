@@ -66,7 +66,7 @@
         <canvas class="smoke-animation" id="smokeAnimation"></canvas>
     </section>
 
-    <section class="screen-registration" id="screenRegistration">
+    <section class="screen-registration" id="screenRegistration" hidden>
         <h2 class="visually-hidden">Registration screen</h2>
         <div class="circle"></div>
         <div class="girl"></div>
@@ -128,7 +128,33 @@
         <canvas class="smoke-animation" id="smokeAnimation"></canvas>
     </section>
 
-    
+    <section class="screen-restore" id="screenRestore">
+        <h2 class="visually-hidden">Restore screen</h2>
+        <div class="triangle"></div>
+        <div class="girl"></div>
+        <div class="border"></div>
+        <div class="restore">
+            <img src="img/logo-auth.webp">
+            <h2>Восстановление</h2>
+            <p>Вспомнили пароль?
+                <a href="#" id="auth">Так водите</a>
+            </p>
+            <form>
+                <input type="text" placeholder="Почта" class="email">
+                <div class="prompt">
+                    <h3>Ввод почты</h3>
+                    <p>Введите ту почту которую вы 
+                        вводили при регистрации 
+                        аккаунта После мы отпраим вам
+                        сообщения на нее с 
+                        дальнейшими действиями
+                        о востановлении пароля</p>
+                </div>
+                <button>Продолжить</button>
+            </form>
+        </div>
+        <canvas class="smoke-animation" id="smokeAnimation"></canvas>
+    </section>
     <script src="main.compiled.min.js"></script>
     <script src="smoke.js"></script>
 </body>
