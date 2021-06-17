@@ -1,6 +1,10 @@
 @import "_global.scss";
 @import "_mixins.scss";
 
+body {
+  overflow: hidden;
+}
+
 .screen- {
 
   &welcome {
@@ -16,6 +20,7 @@
     background-image: url("img/bg.webp");
     @include backgroundImage(50%);
 
+ 
     overflow: hidden;
 
     .vignette {
@@ -243,6 +248,7 @@
     background-image: url("img/bg-registration.webp");
     @include backgroundImage(50%);
 
+ 
     overflow: hidden;
 
     .circle {
@@ -393,6 +399,7 @@
     background-image: url("img/bg-restore.webp");
     @include backgroundImage(50%);
 
+ 
     overflow: hidden;
 
     .triangle {
@@ -440,7 +447,7 @@
     .restore {
       position: absolute;
       top: 50%;
-      right: 50%;
+      left: 50%;
       z-index: 10;
 
       display: flex;
@@ -452,7 +459,7 @@
 
       color: white;
 
-      transform: translate(-50%, -50%);
+      transform: translate(-100%, -50%);
 
       form {
         position: relative;

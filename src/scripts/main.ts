@@ -1,2 +1,2 @@
 import './_welcome';
-import './_auth';
+import './_transition';
