@@ -61,7 +61,7 @@ exports.webpack = webpack = () => {
       mode: 'production',
       entry: entryPoints,
       output: {
-        filename: '[name].js'
+        filename: '[name].compiled.js'
       },
       resolve: {
         extensions: ['.ts']
@@ -81,7 +81,7 @@ exports.webpack = webpack = () => {
 }
 
 exports.jsmin = jsmin = () => {
-  return gulp.src('src/**/*.js', { read: true })
+  return gulp.src('src/**/*.compiled.js', { read: true })
     .pipe(clean())
     .pipe(uglify())
     .pipe(rename((p) => {
