@@ -141,7 +141,7 @@
       @include backgroundImage(50%);
     }
 
-    .girl {
+    .character {
       position: absolute;
       left: 0;
       z-index: 8;
@@ -149,7 +149,7 @@
       width: 50%;
       height: 100%;
 
-      background-image: url("img/girl.webp");
+      background-image: url("img/character-auth.webp");
       background-position: 55% 12.5%;
       background-repeat: no-repeat;
       background-size: 190%;
@@ -281,7 +281,7 @@
       transform: translate(0, -50%);
     }
 
-    .girl {
+    .character {
       position: absolute;
       right: 0;
       z-index: 8;
@@ -289,7 +289,7 @@
       width: 50%;
       height: 100%;
 
-      background-image: url("img/girl-registration.webp");
+      background-image: url("img/character-registration.webp");
       background-position: 0% 75%;
       background-repeat: no-repeat;
       background-size: 200%;
@@ -397,6 +397,132 @@
       margin-top: 10px;
 
       color: #3a9db6;
+    }
+  }
+
+  &restore {
+    position: absolute;
+    z-index: 997;
+
+    width: 100%;
+    height: 100%;
+
+    margin: 0;
+    padding: 0;
+
+    background-image: url("img/bg-restore.webp");
+    @include backgroundImage(50%);
+
+    overflow: hidden;
+
+    .triangle {
+      position: absolute;
+      right: -10%;
+      bottom: -15%;
+      z-index: 7;
+
+      width: 50%;
+
+      padding-top: 50%;
+
+      background-image: url("img/triangle.webp");
+      @include backgroundImage(50%);
+
+      transform: rotate(-45deg);
+    }
+
+    .character {
+      position: absolute;
+      left: 0;
+      z-index: 8;
+
+      width: 50%;
+      height: 100%;
+
+      background-image: url("img/character-restore.webp");
+      background-position: 55% 12.5%;
+      background-repeat: no-repeat;
+      background-size: 190%;
+    }
+
+    .border {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: 9;
+
+      background-image: url("img/border-restore.webp");
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      background-size: 97.5% 97.5%;
+    }
+
+    .restore {
+      position: absolute;
+      top: 50%;
+      right: 50%;
+      z-index: 10;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      width: 400px;
+
+      color: white;
+
+      transform: translate(100%, -50%);
+
+      form {
+        position: relative;
+
+        * {
+          margin-top: 10px;
+        }
+      }
+
+      button {
+        width: 100%;
+        height: 85px;
+
+        color: white;
+        font-size: 30px;
+
+        background: linear-gradient(to left, #7f5ede, #4e3abc);
+        border: 3px solid #533dc0;
+        border-radius: 10px;
+      }
+
+      .prompt {
+        position: absolute;
+        top: 120px;
+        left: -300px;
+
+        width: 280px;
+
+        margin: 0;
+        padding: 10px;
+
+        color: white;
+        font-size: 12px;
+
+        background-color: rgba($color: white, $alpha: .02);
+        border-radius: 10px;
+
+        opacity: 0;
+
+        transform: translate(0%, -50%);
+        transition: opacity .15s ease-in-out;
+      }
+    }
+
+    input:focus+.prompt {
+      opacity: 1;
+    }
+
+    a {
+      margin-top: 10px;
     }
   }
 
